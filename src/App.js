@@ -1,7 +1,23 @@
 import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+import Login from './pages/Login';
+import Wallet from './pages/Wallet';
+import './App.css';
 
 function App() {
-  return <div>Hello, TrybeWallet!</div>;
+  return (
+    <div>
+      <div>Hello, TrybeWallet!</div>
+      <Switch>
+
+        <Route exact path="/" component={ Login } />
+        <Route exact path="/carteira">
+          <Wallet />
+        </Route>
+
+      </Switch>
+    </div>
+  );
 }
 
 export default App;
